@@ -1,0 +1,16 @@
+{
+  "name": "expressjs-basic",
+  "version": "1.0.0",
+  "description": "Express JS with Node Js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon.cmd app.js"
+  },
+  "author": "Dimas Agusta Wiranata",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.3",
+    "express": "^4.17.1"
+  }
+}
