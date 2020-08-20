@@ -15,6 +15,8 @@
 
       <!-- Begin Page Content -->
       <div class="container-fluid">
+
+        <%- include('../../partials/message.ejs') %>
         
         <!-- Page Heading -->
         <h1 class="h3 mb-4 text-gray-800">Category</h1>
@@ -61,4 +63,22 @@
   </div>
 </div>
 
+<%- include('add_modal.ejs') %>
+<%- include('edit_modal.ejs') %>
 <%- include('../../partials/js.ejs') %>
+
+<script>
+  $('#dataTable').on('click', '.button-update', function () {
+
+    // mengambil data name dan id dari tabel_category dengan berdasarkan 
+    // data-id dan data-name 
+    let id = $(this).data('id');
+    let name = $(this).data('name');
+
+    $('#edit-modal').modal('show'); // memunculkan dengan modal dengan id edit-modal
+
+    // mengirim data id & nama ke edit_modal dengan class id dan name
+    $('.id').val(id); 
+    $('.name').val(name);
+  })
+</script>

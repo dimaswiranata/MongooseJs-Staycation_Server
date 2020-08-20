@@ -1,12 +1,15 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
+const { ObjectId } = mongoose.Schema;
 
-// inisialisasi object category Schema
-const categorySchema = new mongoose.Schema({ 
+const categorySchema = new mongoose.Schema({
   name: {
-    type : String,
+    type: String,
     required: true
   },
-});
+  itemId: [{
+    type: ObjectId,
+    ref: 'Item'
+  }]
+})
 
-// inisialisasi model Category dari categorySchema
-module.exports = mongoose.model('Category', categorySchema);
+module.exports = mongoose.model('Category', categorySchema)
