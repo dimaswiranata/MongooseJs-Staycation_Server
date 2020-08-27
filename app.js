@@ -14,6 +14,7 @@ const flash = require('connect-flash');
 const session = require('express-session');
 
 // import cors untuk akses API
+const cors = require('cors');
 
 // import mongoose
 const mongoose = require("mongoose");
@@ -72,7 +73,7 @@ app.use('/admin', adminRouter);
 app.use('/api/v1/member', apiRouter);
 
 // cors
-app.use(cors())
+app.use(cors());
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
