@@ -14,6 +14,8 @@ const flash = require('connect-flash');
 const session = require('express-session');
 
 // import cors untuk akses API
+// import cors untuk akses API
+// import cors untuk akses API
 const cors = require('cors');
 
 // import mongoose
